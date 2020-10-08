@@ -4,7 +4,7 @@ import SearchBar from '../components/SearchBar';
 import RestaurantList from '../components/RestaurantList';
 import useRestaurants from '../hooks/useRestaurants';
 
-function SearchScreen() {
+function SearchScreen({ navigation }) {
   const [term, setTerm] = useState('');
   const [searchApi, restaurants, errMessage] = useRestaurants();
 
@@ -15,42 +15,42 @@ function SearchScreen() {
   };
 
   return (
-    <View style={styles.containerStyle}>
+    <>
       <SearchBar
         term={term}
         onTermChange={setTerm}
         onTermSubmit={() => searchApi(term)}
       />
       {errMessage ? <Text>{errMessage}</Text> : null}
-      <Text style={styles.textStyle}>
-        We have found {restaurants.length} restaurants
-      </Text>
       <ScrollView>
-        <RestaurantList restaurants={filterResultsBy('$')} title='Cheap' />
+        <RestaurantList
+          restaurants={filterResultsBy('$')}
+          title='Cheap'
+          navigation={navigation}
+        />
         <RestaurantList
           restaurants={filterResultsBy('$$')}
           title='Bit Pricer'
+          navigation={navigation}
         />
         <RestaurantList
           restaurants={filterResultsBy('$$$')}
           title='Expensive'
+          navigation={navigation}
         />
         <RestaurantList
           restaurants={filterResultsBy('$$$$')}
           title='Big Spender'
+          navigation={navigation}
         />
       </ScrollView>
-    </View>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   textStyle: {
     marginLeft: 12,
-  },
-  containerStyle: {
-    flex: 1,
-    backgroundColor: 'white',
   },
 });
 

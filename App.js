@@ -10,16 +10,21 @@ const Stack = createStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Search'>
+      <Stack.Navigator
+        screenOptions={{ headerTitleAlign: 'center' }}
+        initialRouteName='Search'
+      >
         <Stack.Screen
           name='Search'
           component={SearchScreen}
-          options={{ title: 'Restaurants Search' }}
+          options={{ title: 'Restaurant Search' }}
         />
         <Stack.Screen
           name='Detail'
           component={DetailScreen}
-          options={{ title: 'Restaurant Detail' }}
+          options={{
+            title: 'Restaurant Detail',
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
