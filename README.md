@@ -4,6 +4,8 @@ This React Native app is built using the expo client and the Yelp Api.
 
 You can search for different restaurants in your area depending on what you want to eat and get more information about them.
 
+![Alt text](assets/sc1.jpg?raw=true 'Search Screen')![Alt text](assets/sc2.jpg?raw=true 'Detail Screen')
+
 To use the application follow below steps
 
 Download the Expo app
