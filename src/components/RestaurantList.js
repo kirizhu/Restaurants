@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, View, FlatList } from 'react-native';
-
+import RestaurantsDetail from './RestaurantsDetail';
 const RestaurantList = ({ title, restaurants }) => {
   return (
-    <View>
+    <View style={styles.containerStyle}>
       <Text style={styles.titleStyle}>{title}</Text>
       <FlatList
         showsHorizontalScrollIndicator={false}
@@ -11,10 +11,9 @@ const RestaurantList = ({ title, restaurants }) => {
         data={restaurants}
         keyExtractor={(restaurant) => restaurant.id}
         renderItem={({ item }) => {
-          return <Text>{item.name} </Text>;
+          return <RestaurantsDetail restaurant={item} />;
         }}
       />
-      <Text>Results: {restaurants.length}</Text>
     </View>
   );
 };
@@ -25,5 +24,10 @@ const styles = StyleSheet.create({
   titleStyle: {
     fontSize: 18,
     fontWeight: 'bold',
+    marginLeft: 12,
+    marginBottom: 5,
+  },
+  containerStyle: {
+    marginBottom: 10,
   },
 });
