@@ -22,7 +22,7 @@ Once you have the expo app follow this link:
 
 ### https://expo.io/@kirizhu/projects/Restaurants
 
-Scan the QR code to open the Restaurants app on your device.
+Scan the QR code with the Expo app to open the Restaurants app on your device.
 
 Future imporvements:
 

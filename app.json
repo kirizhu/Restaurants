@@ -22,6 +22,7 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": ""
+    "description": "You can search for different restaurants in your area depending on what you want to eat and get more information about them.",
+    "githubUrl": "https://github.com/kirizhu/Restaurants"
   }
 }
