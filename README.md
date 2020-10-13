@@ -24,6 +24,9 @@ Once you have the expo app follow this link:
 
 Scan the QR code with the Expo app to open the Restaurants app on your device.
 
+Or click this link if you are on your mobile device to open the app:
+### https://expo.io/--/to-exp/exp%3A%2F%2Fexp.host%2F%40kirizhu%2FRestaurants
+
 Future imporvements:
 
 - Add map in detail view
